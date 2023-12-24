@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/A/Desktop/assign",
-      "program": "c:/Users/A/Desktop/assign/build/Debug/outDebug",
+      "cwd": "c:/Users/A/Desktop/assign/datastructurAssigment/datastructurAssigment/datastructurAssigment",
+      "program": "c:/Users/A/Desktop/assign/datastructurAssigment/datastructurAssigment/datastructurAssigment/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
