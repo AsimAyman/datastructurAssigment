@@ -59,7 +59,18 @@ void Stack<T>::printStack()const{
 	std::cout<<stack[i]<<std::endl;
  }
 }
+
+// ... (insertInSortedOrder and sortStack remain unchanged)
 template<class T>
-int Stack<T>::getEleAt(int i)const{
-	return stack[i];
+void Stack<T>::displayStackVisual()const {
+    std::cout << "Current Stack:" << std::endl;
+    std::cout << "-------------" << std::endl;
+    if (stackIsEmpty()) {
+        std::cout << "Empty Stack" << std::endl;
+    } else {
+        for (int i = count; i >= 0; --i) {
+            std::cout << "| " << stack[i] << " |" << std::endl;
+            std::cout << "-------------" << std::endl;
+        }
+    }
 }

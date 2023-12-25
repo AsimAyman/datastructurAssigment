@@ -1,5 +1,9 @@
 #include <iostream> // lib to system calls
 #include "stack.h"
+#include <chrono>
+#include <thread>
+#include <cstdlib>
+
 enum class SortOrder { ASCENDING, DESCENDING };
 using namespace std;// to enable me to use cin and cout functions
 
@@ -41,21 +45,17 @@ void sortStack(Stack<T>& s, SortOrder order) {
 
 
 
-// ... (insertInSortedOrder and sortStack remain unchanged)
-void displayStackVisual(const Stack<int>& s) {
-    cout << "Current Stack:" << endl;
-    cout << "-------------" << endl;
+void displaySortingMessage() {
+    const int numDots = 10; // Number of dots in the ellipsis
+    const int delayMs = 1000; // Delay between each iteration in milliseconds
 
-    if (s.stackIsEmpty()) {
-        cout << "Empty Stack" << endl;
-    } else {
-        int len;
-        s.size(len);
-        for (int i =len; i >= 0; --i) {
-            cout << "| " << s.getEleAt(i) << " |" << endl;
-            cout << "-------------" << endl;
-        }
+    cout << "Sorting";
+    for (int i = 0; i < numDots; ++i) {
+        cout << '.';
+        cout.flush(); // Flush the output to display the dot immediately
+        this_thread::sleep_for(chrono::milliseconds(delayMs));
     }
+    cout << endl;
 }
 
 int main() {        // program start point
@@ -67,7 +67,7 @@ int main() {        // program start point
     if (sortOrderInput == 1) {
         sortOrder = SortOrder::DESCENDING;
     }
-    int v1 ,v2,v3,v4;
+    int v1 ,v2,v3,v4;  
     cout<<"Enter v1=> ";
     cin>>v1;
     cout<<"Enter v2=> ";
@@ -85,14 +85,14 @@ int main() {        // program start point
 system("cls");
 
     cout << "Stack before sorting:" << endl;
-    displayStackVisual(s1);
+    s1.displayStackVisual();
     cout << endl;
 
-    cout << "Sorting..." << endl;
+    displaySortingMessage();
     sortStack(s1, sortOrder);
 
     cout << "\nSorted Stack:" << endl;
-    displayStackVisual(s1);
+    s1.displayStackVisual();
 
 
 

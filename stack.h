@@ -16,7 +16,7 @@ public:
 	void getTop(T& e)const; // get the elemnt of the rear without removing it
 	void size(int& e)const; // get the size of current stack
 	void printStack()const; //to print the content of the stack
-	int getEleAt(int i)const;
+	void displayStackVisual()const;
 };
 #include "stack.cpp"
 
