@@ -42,7 +42,6 @@ void sortStack(Stack<T>& s, SortOrder order) {
 
 
 // ... (insertInSortedOrder and sortStack remain unchanged)
-
 void displayStackVisual(const Stack<int>& s) {
     cout << "Current Stack:" << endl;
     cout << "-------------" << endl;
@@ -83,7 +82,7 @@ int main() {        // program start point
     s1.push(v3);
     s1.push(v4);
    
-
+system("cls");
 
     cout << "Stack before sorting:" << endl;
     displayStackVisual(s1);
